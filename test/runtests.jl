@@ -50,9 +50,9 @@ C_4 = [[2, 4, 13, 14], [1, 2, 14], [3, 4, 5], [6, 7, 13], [7, 8, 13], [8, 9, 13]
        [9, 10, 11], [11, 12], [12, 13]]
 
 # Cliques extraction
-C_2_test = EECC.limited_maximal_cliques(G, 2)
-C_3_test = EECC.limited_maximal_cliques(G, 3)
-C_4_test = EECC.limited_maximal_cliques(G, 4)
+C_2_test = DisjointCliqueCover.limited_maximal_cliques(G, 2)
+C_3_test = DisjointCliqueCover.limited_maximal_cliques(G, 3)
+C_4_test = DisjointCliqueCover.limited_maximal_cliques(G, 4)
 
 # Test cliques extraction
 @testset "Cliques_Extraction" begin
@@ -76,19 +76,19 @@ EC_2 = Vector{Vector{Int64}}()
 ord_2 = zeros(Int64, length(C_2))
 r_2_test = zeros(Float64, length(C_2))
 indexes_2 = zeros(Int64, 0)
-EECC.compute_scores!(G, C_2, EC_2, ord_2, r_2_test, indexes_2)
+DisjointCliqueCover.compute_scores!(G, C_2, EC_2, ord_2, r_2_test, indexes_2)
 
 EC_3 = Vector{Vector{Int64}}()
 ord_3 = zeros(Int64, length(C_3))
 r_3_test = zeros(Float64, length(C_3))
 indexes_3 = zeros(Int64, 0)
-EECC.compute_scores!(G, C_3, EC_3, ord_3, r_3_test, indexes_3)
+DisjointCliqueCover.compute_scores!(G, C_3, EC_3, ord_3, r_3_test, indexes_3)
 
 EC_4 = Vector{Vector{Int64}}()
 ord_4 = zeros(Int64, length(C_4))
 r_4_test = zeros(Float64, length(C_4))
 indexes_4 = zeros(Int64, 0)
-EECC.compute_scores!(G, C_4, EC_4, ord_4, r_4_test, indexes_4)
+DisjointCliqueCover.compute_scores!(G, C_4, EC_4, ord_4, r_4_test, indexes_4)
 
 # Test score computation
 @testset "Score_Computation" begin
