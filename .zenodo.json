@@ -1,0 +1,26 @@
+{
+    "creators": [
+        {
+            "affiliation": "Universitat Rovira i Virgili, Spain",
+            "name": "Burgio, Giulio",
+            "orcid": "0000-0002-6333-4847"
+        },
+        {
+            "affiliation": "Universitat Rovira i Virgili, Spain",
+            "name": "Gómez, Sergio",
+            "orcid": "0000-0003-1820-0062"
+        },
+        {
+            "affiliation": "Universitat Rovira i Virgili, Spain",
+            "name": "Arenas, Alex",
+            "orcid": "0000-0003-0937-0334"
+        },
+        {
+            "affiliation": "Harvard Medical School, MA, USA",
+            "name": "Matamalas, Joan T.",
+            "orcid": "0000-0002-7563-9269"
+        }
+    ],
+    "description": "Package to estimate a minimum edge-disjoint edge clique cover (EECC) of a graph",
+    "title": "EECC"
+}
