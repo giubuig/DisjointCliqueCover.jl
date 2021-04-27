@@ -1,5 +1,5 @@
 name = "DisjointCliqueCover"
-uuid = "84c62def-8fae-4380-b7e9-40f47ed17cae"
+uuid = "f7dc3c69-b0f0-46d7-a66a-b632855ee0cb"
 authors = ["Giulio Burgio <giulioburgio@gmail.com>", "Sergio Gómez <sergio.gomez@urv.cat>", "Joan T. Matamalas <jtmatamalas@protonmail.com>"]
 version = "0.1.0"
 
