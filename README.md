@@ -27,6 +27,6 @@ The notion of EECC is introduced in [[1](#Reference-1)] as a basis to define the
 
 ## Documentation
 
-The full documentation of [EECC](https://github.com/giubuig/DisjointCliqueCover.jl) can be found [here][docs-latest-url]
+The full documentation of [DisjointCliqueCover.jl](https://github.com/giubuig/DisjointCliqueCover.jl) can be found [here][docs-latest-url]
 
 [docs-latest-url]: http://giubuig.github.io/DisjointCliqueCover.jl/v0.1/
