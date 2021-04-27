@@ -1,7 +1,8 @@
 # DisjointCliqueCover.jl
 
 [![Build Status](https://travis-ci.com/giubuig/DisjointCliqueCover.jl.svg?branch=main)](https://travis-ci.com/giubuig/DisjointCliqueCover.jl)
-
+[![][docs-latest-img]][docs-latest-url]
+[![DOI](https://zenodo.org/badge/362124006.svg)](https://zenodo.org/badge/latestdoi/362124006)
 
 ## Description
 
@@ -32,4 +33,5 @@ The notion of EECC is introduced in [[1](#references)] as a basis to define the 
 
 The full documentation of [DisjointCliqueCover.jl](https://github.com/giubuig/DisjointCliqueCover.jl) can be found [here][docs-latest-url]
 
-[docs-latest-url]: http://giubuig.github.io/DisjointCliqueCover.jl/v0.1/
+[docs-latest-url]: https://giubuig.github.io/DisjointCliqueCover.jl/v0.1/
+[docs-latest-img]: https://img.shields.io/badge/docs-latest-blue.svg
