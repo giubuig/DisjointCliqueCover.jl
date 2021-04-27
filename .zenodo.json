@@ -23,5 +23,5 @@
     ],
     "description": "DisjointCliqueCover.jl: Package to estimate a minimum edge-disjoint edge clique cover (EECC) of a graph",
     "title": "DisjointCliqueCover.jl",
-    "grants": [{'id':'945413'}]
+    "grants": [{"id":"945413"}]
 }
