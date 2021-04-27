@@ -9,5 +9,6 @@ makedocs(sitename = "DisjointCliqueCover.jl",
          )
 
 deploydocs(
-    repo = "github.com/giubuig/DisjointCliqueCover.jl.git"
+    repo = "github.com/giubuig/DisjointCliqueCover.jl.git",
+    devbranch = "main"
 )
