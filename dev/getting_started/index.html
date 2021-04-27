@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Getting started · DisjointCliqueCover.jl</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit">DisjointCliqueCover.jl</span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Overview</a></li><li class="is-active"><a class="tocitem" href>Getting started</a><ul class="internal"><li><a class="tocitem" href="#Contents"><span>Contents</span></a></li><li><a class="tocitem" href="#Installation-and-usage"><span>Installation and usage</span></a></li><li><a class="tocitem" href="#Input-data"><span>Input data</span></a></li><li><a class="tocitem" href="#Edge-disjoint-edge-clique-cover-(EECC)"><span>Edge-disjoint edge clique cover (EECC)</span></a></li></ul></li><li><a class="tocitem" href="../library/">Library</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Getting started</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Getting started</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/giubuig/DisjointCliqueCover.jl/blob/master/docs/src/getting_started.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Getting-Started"><a class="docs-heading-anchor" href="#Getting-Started">Getting Started</a><a id="Getting-Started-1"></a><a class="docs-heading-anchor-permalink" href="#Getting-Started" title="Permalink"></a></h1><h2 id="Contents"><a class="docs-heading-anchor" href="#Contents">Contents</a><a id="Contents-1"></a><a class="docs-heading-anchor-permalink" href="#Contents" title="Permalink"></a></h2><ul><li><a href="#Getting-Started">Getting Started</a></li><ul><li><a href="#Contents">Contents</a></li><li><a href="#Installation-and-usage">Installation and usage</a></li><li><a href="#Input-data">Input data</a></li><li><a href="#Edge-disjoint-edge-clique-cover-(EECC)">Edge-disjoint edge clique cover (EECC)</a></li></ul></ul><h2 id="Installation-and-usage"><a class="docs-heading-anchor" href="#Installation-and-usage">Installation and usage</a><a id="Installation-and-usage-1"></a><a class="docs-heading-anchor-permalink" href="#Installation-and-usage" title="Permalink"></a></h2><p>Installation:</p><pre><code class="language-julia">] add DisjointCliqueCover</code></pre><p>Usage:</p><pre><code class="language-julia">using DisjointCliqueCover</code></pre><h2 id="Input-data"><a class="docs-heading-anchor" href="#Input-data">Input data</a><a id="Input-data-1"></a><a class="docs-heading-anchor-permalink" href="#Input-data" title="Permalink"></a></h2><p>We need first an undirected network of the <code>SimpleGraph</code> type as provided by package <code>LightGraphs</code>. For example, let us create the following small network:</p><img src="../figs/eecc.png" alt="eecc.png" width="450"/><p>Using <code>LightGraphs</code> functions:</p><pre><code class="language-julia">using LightGraphs
+
+N = 14
+edges_list = [(1, 2), (1, 14), (2, 4), (2, 13), (2, 14), (3, 4), (3, 5), (4, 5), (4, 13),
+              (4, 14), (6, 7), (6, 13), (7, 8), (7, 13), (8, 9), (8, 13), (9, 10), (9, 11),
+              (9, 13), (10, 11), (11, 12), (12, 13), (13, 14)]
+
+G = SimpleGraph(N)
+for e in edges_list
+  add_edge!(G, e[1], e[2])
+end</code></pre><h2 id="Edge-disjoint-edge-clique-cover-(EECC)"><a class="docs-heading-anchor" href="#Edge-disjoint-edge-clique-cover-(EECC)">Edge-disjoint edge clique cover (EECC)</a><a id="Edge-disjoint-edge-clique-cover-(EECC)-1"></a><a class="docs-heading-anchor-permalink" href="#Edge-disjoint-edge-clique-cover-(EECC)" title="Permalink"></a></h2><p>EECC requires to decide the maximum order of the cliques to consider:</p><pre><code class="language-julia">m₀ = 4</code></pre><p>To estimate a minimal EECC, just call the <code>get_EECC</code> function:</p><pre><code class="language-julia">eecc = get_EECC(G, m₀)</code></pre><p>The result is a list of the cliques that form the EECC, where each clique is indicated by the list of nodes it contains:</p><pre><code class="language-julia">for c in eecc
+  println(c)
+end</code></pre><pre class="documenter-example-output">[2, 4, 13, 14]
+[3, 4, 5]
+[6, 7, 13]
+[8, 9, 13]
+[9, 10, 11]
+[1, 2]
+[1, 14]
+[7, 8]
+[11, 12]
+[12, 13]</pre><p>A graph can admit multiple minimal EECC, thus different executions may lead to different estimations. For example, for the same network but with maximum order <code>m₀ = 3</code> we may get:</p><pre><code class="language-julia">m₀ = 3
+eecc = get_EECC(G, m₀)</code></pre><pre class="documenter-example-output">[1, 2, 14]
+[3, 4, 5]
+[4, 13, 14]
+[6, 7, 13]
+[8, 9, 13]
+[9, 10, 11]
+[2, 4]
+[2, 13]
+[7, 8]
+[11, 12]
+[12, 13]</pre><p>but also</p><pre><code class="language-julia">m₀ = 3
+eecc = get_EECC(G, m₀)</code></pre><pre class="documenter-example-output">[1, 2, 14]
+[2, 4, 13]
+[3, 4, 5]
+[6, 7, 13]
+[8, 9, 13]
+[9, 10, 11]
+[4, 14]
+[7, 8]
+[11, 12]
+[12, 13]
+[13, 14]</pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Overview</a><a class="docs-footer-nextpage" href="../library/">Library »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Tuesday 27 April 2021 16:04">Tuesday 27 April 2021</span>. Using Julia version 1.6.1.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
