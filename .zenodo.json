@@ -7,13 +7,13 @@
         },
         {
             "affiliation": "Universitat Rovira i Virgili, Spain",
-            "name": "Gómez, Sergio",
-            "orcid": "0000-0003-1820-0062"
+            "name": "Arenas, Alex",
+            "orcid": "0000-0003-0937-0334"
         },
         {
             "affiliation": "Universitat Rovira i Virgili, Spain",
-            "name": "Arenas, Alex",
-            "orcid": "0000-0003-0937-0334"
+            "name": "Gómez, Sergio",
+            "orcid": "0000-0003-1820-0062"
         },
         {
             "affiliation": "Harvard Medical School, MA, USA",
@@ -21,6 +21,7 @@
             "orcid": "0000-0002-7563-9269"
         }
     ],
-    "description": "Package to estimate a minimum edge-disjoint edge clique cover (EECC) of a graph",
-    "title": "EECC"
+    "description": "DisjointCliqueCover.jl: Package to estimate a minimum edge-disjoint edge clique cover (EECC) of a graph",
+    "title": "DisjointCliqueCover.jl",
+    "grants": [{'id':'945413'}]
 }
