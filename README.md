@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/giubuig/DisjointCliqueCover.jl.svg?branch=main)](https://travis-ci.com/giubuig/DisjointCliqueCover.jl)
 [![][docs-latest-img]][docs-latest-url]
-[![DOI](https://zenodo.org/badge/362124006.svg)](https://zenodo.org/badge/latestdoi/362124006)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4723747.svg)](https://doi.org/10.5281/zenodo.4723747)
 
 ## Description
 
