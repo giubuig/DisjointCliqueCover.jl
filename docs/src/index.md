@@ -44,7 +44,7 @@ end  # hide
 
 ## References
 
-1. Giulio Burgio, Alex Arenas, Sergio Gómez and Joan T. Matamalas: Network clique cover approximation to analyze complex contagions through group interactions, _Comms. Phys._ (2021) in press ([arXiv:2101.03618](https://arxiv.org/abs/2101.03618))
+1. Giulio Burgio, Alex Arenas, Sergio Gómez and Joan T. Matamalas: Network clique cover approximation to analyze complex contagions through group interactions, _Comms. Phys._ **4**, 111 (2021) ([doi](https://doi.org/10.1038/s42005-021-00618-z))
 
 2. Lawrence T. Kou, Larry J. Stockmeyer and Chak Kuen Wong: Covering edges by cliques with regard to keyword conflicts and intersection graphs, _Comms. ACM_ **21**(2) (1978) 135–139 ([doi](https://doi.org/10.1145/359340.359346))
 
