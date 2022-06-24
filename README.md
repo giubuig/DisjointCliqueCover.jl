@@ -6,7 +6,7 @@
 
 ## Description
 
-This package [DisjointCliqueCover](https://github.com/giubuig/DisjointCliqueCover.jl), written in the [Julia](https://julialang.org) language, implements a method to estimate a minimal _edge-disjoint edge clique cover (EECC)_ of a graph, according to the heuristic presented in Burgio et al. [[1](#references)]. A minimal edge clique cover is a minimal set of cliques able to cover the entire set of edges in the graph. In a EECC, the cliques are required to be all edge-disjoint, i.e., they can have no more than one node in common.
+This package [DisjointCliqueCover](https://github.com/giubuig/DisjointCliqueCover.jl), written in the [Julia](https://julialang.org) language, implements a method to estimate a minimal _edge-disjoint edge clique cover (EECC)_ of a graph, according to the heuristic presented in Burgio et al. [[1](#references)]. A minimal edge clique cover is a minimal set of cliques able to cover the entire set of edges in the graph. In a EECC, the cliques are required to be all edge-disjoint, i.e., they can have no more than one vertex in common.
 
 A graph can admit multiple minimal edge clique covers and finding one of them is known to be a NP-complete problem. Therefore, approximate heuristics are needed to estimate it in large graphs.
 
@@ -15,7 +15,7 @@ The notion of EECC is introduced in [[1](#references)] as a basis to define the 
 
 ## References
 
-1. Giulio Burgio, Alex Arenas, Sergio Gómez and Joan T. Matamalas: Network clique cover approximation to analyze complex contagions through group interactions, _Comms. Phys._ (2021) in press ([arXiv:2101.03618](https://arxiv.org/abs/2101.03618))
+1. Giulio Burgio, Alex Arenas, Sergio Gómez and Joan T. Matamalas: Network clique cover approximation to analyze complex contagions through group interactions, _Comms. Phys._ __4__, 111 (2021) ([https://doi.org/10.1038/s42005-021-00618-z](https://doi.org/10.1038/s42005-021-00618-z))
 
 
 ## Authors
