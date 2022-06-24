@@ -15,7 +15,7 @@ The notion of EECC is introduced in [[1](#references)] as a basis to define the 
 
 ## References
 
-1. Giulio Burgio, Alex Arenas, Sergio Gómez and Joan T. Matamalas: Network clique cover approximation to analyze complex contagions through group interactions, _Comms. Phys._ __4__, 111 (2021) ([https://doi.org/10.1038/s42005-021-00618-z](https://doi.org/10.1038/s42005-021-00618-z))
+1. Giulio Burgio, Alex Arenas, Sergio Gómez and Joan T. Matamalas: Network clique cover approximation to analyze complex contagions through group interactions, _Comms. Phys._ **4**, 111 (2021) ([doi](https://doi.org/10.1038/s42005-021-00618-z))
 
 
 ## Authors
